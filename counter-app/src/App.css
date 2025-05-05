@@ -1,0 +1,128 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Beautiful font for a modern look */
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+  filter: brightness(70%); /* Darkens the background image for better contrast */
+}
+
+.App {
+  background-color: rgba(0, 0, 0, 0.7); /* Darkened background for contrast */
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3); /* Soft shadow for the container */
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  border: 2px solid #ff6f61; /* Border color to match the buttons */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.App:hover {
+  transform: scale(1.05); /* Adds a smooth scale effect when hovering */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* More intense shadow on hover */
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 160px; /* Ensures buttons are wide for a nice design */
+  border: 2px solid #ff6f61; /* Border color matching the button */
+}
+.button-group {
+  display: flex;
+  gap: 20px; /* You can adjust the gap size */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #d24e42;
+  transform: translateY(-4px); /* Hover effect: lift the button */
+}
+
+button:active {
+  transform: translateY(2px); /* Slight "pressing" effect */
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.Counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Counter button {
+  width: 160px; /* Ensures buttons are consistent in width */
+  font-size: 1.4rem;
+}
+
+/* Smooth fade-in effect for the entire app */
+.App {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  .App {
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  button {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+  }
+}
