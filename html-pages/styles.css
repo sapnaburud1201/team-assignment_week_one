@@ -1,0 +1,161 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;    background-size: cover;
+    position: relative;
+}
+
+/* Overlay to lighten the background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* Light overlay */
+    z-index: -1; /* Behind the content */
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 1); /* Darken header background for contrast */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header h1 span {
+    color: #ff69b4; /* Use a light pink for emphasis */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ccc; /* Lighter gray for paragraph text */
+}
+
+/* Sections */
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for sections */
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff69b4; /* Light pink for section headers */
+}
+
+.about {
+    background-color: rgba(0, 0, 0, 1); /* Dark black background for "About Me" */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.skills {
+    background-color: rgba(0, 0, 0, 1); /* Dark black background for "Skills" */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact {
+    background-color: rgba(0, 0, 0, 1); /* Dark black background for "Skills" */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+/* Skills */
+.skills ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff69b4; /* Light pink button */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+}
